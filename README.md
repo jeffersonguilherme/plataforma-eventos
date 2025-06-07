@@ -20,6 +20,7 @@ Este projeto é uma API desenvolvida com ASP.NET Core para gerenciamento de even
 
 ## 🚀 Funcionalidades Futuras
 
+- Geração de Incresso com QR Code
 - Check-in via QR Code
 - Envio de e-mails de confirmação e lembrete
 - Geração de certificados em PDF
@@ -27,3 +28,17 @@ Este projeto é uma API desenvolvida com ASP.NET Core para gerenciamento de even
 - Sistema de avaliação de eventos
 - Front-end com Blazor ou React
 - Integração com sistemas de pagamento (Stripe/PayPal)
+
+📅 Entidade: Evento
+
+| Propriedade           | Tipo                        | Descrição                                      |
+| --------------------- | --------------------------- | ---------------------------------------------- |
+| `Id`                  | `Guid`                      | Identificador único do evento.                 |
+| `Titulo`              | `string`                    | Título ou nome do evento.                      |
+| `Descricao`           | `string`                    | Descrição detalhada sobre o evento.            |
+| `Local`               | `string`                    | Local onde o evento será realizado.            |
+| `Tipo`                | `Enum`                      | Tipo do evento (ex: Workshop, Palestra, etc.). |
+| `DataDeCriacao`       | `DateTime`                  | Data em que o evento foi criado.               |
+| `DataInicioInscricao` | `DateTime`                  | Data de início das inscrições.                 |
+| `DataFinalIsncricao`  | `DateTime`                  | Data de término das inscrições.                |
+| `Participantes`       | `ICollection<Participante>` | Lista de participantes inscritos no evento.    |
