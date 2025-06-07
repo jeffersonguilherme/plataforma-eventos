@@ -32,3 +32,11 @@
 /home/jefferson/Documentos/GitHub/plataforma-eventos/API/obj/Debug/net8.0/API.pdb
 /home/jefferson/Documentos/GitHub/plataforma-eventos/API/obj/Debug/net8.0/API.genruntimeconfig.cache
 /home/jefferson/Documentos/GitHub/plataforma-eventos/API/obj/Debug/net8.0/ref/API.dll
+/home/jefferson/Documentos/GitHub/plataforma-eventos/API/bin/Debug/net8.0/Application.dll
+/home/jefferson/Documentos/GitHub/plataforma-eventos/API/bin/Debug/net8.0/Domain.dll
+/home/jefferson/Documentos/GitHub/plataforma-eventos/API/bin/Debug/net8.0/Infra.dll
+/home/jefferson/Documentos/GitHub/plataforma-eventos/API/bin/Debug/net8.0/Services.dll
+/home/jefferson/Documentos/GitHub/plataforma-eventos/API/bin/Debug/net8.0/Application.pdb
+/home/jefferson/Documentos/GitHub/plataforma-eventos/API/bin/Debug/net8.0/Domain.pdb
+/home/jefferson/Documentos/GitHub/plataforma-eventos/API/bin/Debug/net8.0/Infra.pdb
+/home/jefferson/Documentos/GitHub/plataforma-eventos/API/bin/Debug/net8.0/Services.pdb
