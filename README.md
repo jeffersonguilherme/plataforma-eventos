@@ -29,7 +29,7 @@ Este projeto é uma API desenvolvida com ASP.NET Core para gerenciamento de even
 - Front-end com Blazor ou React
 - Integração com sistemas de pagamento (Stripe/PayPal)
 
-📅 Entidade: Evento
+## 📅 Entidade: Evento
 
 | Propriedade           | Tipo                        | Descrição                                      |
 | --------------------- | --------------------------- | ---------------------------------------------- |
@@ -43,7 +43,7 @@ Este projeto é uma API desenvolvida com ASP.NET Core para gerenciamento de even
 | `DataFinalIsncricao`  | `DateTime`                  | Data de término das inscrições.                |
 | `Participantes`       | `ICollection<Participante>` | Lista de participantes inscritos no evento.    |
 
-👤 Entidade: Participante
+## 👤 Entidade: Participante
 
 | Propriedade                  | Tipo                     | Descrição                                        |
 | ---------------------------- | ------------------------ | ------------------------------------------------ |
@@ -60,7 +60,7 @@ Este projeto é uma API desenvolvida com ASP.NET Core para gerenciamento de even
 | `Inscricoes`                 | `ICollection<Inscricao>` | Lista de inscrições do participante em eventos.  |
 
 
-📝 Entidade: Inscricao
+## 📝 Entidade: Inscricao
 
 | Propriedade      | Tipo           | Descrição                                                        |
 | ---------------- | -------------- | ---------------------------------------------------------------- |
