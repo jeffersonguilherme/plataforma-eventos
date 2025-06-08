@@ -1,9 +1,10 @@
 using Domain.Enum;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entity;
 
-
+[Table("Evento")]
 public class Evento
 {
     [Key]

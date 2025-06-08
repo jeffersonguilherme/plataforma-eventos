@@ -42,3 +42,31 @@ Este projeto é uma API desenvolvida com ASP.NET Core para gerenciamento de even
 | `DataInicioInscricao` | `DateTime`                  | Data de início das inscrições.                 |
 | `DataFinalIsncricao`  | `DateTime`                  | Data de término das inscrições.                |
 | `Participantes`       | `ICollection<Participante>` | Lista de participantes inscritos no evento.    |
+
+👤 Entidade: Participante
+
+| Propriedade                  | Tipo                     | Descrição                                        |
+| ---------------------------- | ------------------------ | ------------------------------------------------ |
+| `Id`                         | `Guid`                   | Identificador único do participante.             |
+| `Name`                       | `string`                 | Primeiro nome do participante.                   |
+| `Sobrenome`                  | `string`                 | Sobrenome do participante.                       |
+| `Telefone`                   | `string`                 | Número de telefone do participante.              |
+| `Email`                      | `string`                 | Endereço de e-mail do participante.              |
+| `DataNascimento`             | `DateTime`               | Data de nascimento.                              |
+| `Username`                   | `string`                 | Nome de usuário para login.                      |
+| `PasswordHash`               | `string`                 | Hash da senha (armazenamento seguro).            |
+| `RefreshToken`               | `string`                 | Token de atualização para autenticação contínua. |
+| `RefreshTokenExpirationTime` | `DateTime`               | Expiração do refresh token.                      |
+| `Inscricoes`                 | `ICollection<Inscricao>` | Lista de inscrições do participante em eventos.  |
+
+
+📝 Entidade: Inscricao
+
+| Propriedade      | Tipo           | Descrição                                                        |
+| ---------------- | -------------- | ---------------------------------------------------------------- |
+| `Id`             | `Guid`         | Identificador único da inscrição.                                |
+| `EventoId`       | `Guid`         | ID do evento relacionado à inscrição (chave estrangeira).        |
+| `Evento`         | `Evento`       | Navegação para o evento vinculado.                               |
+| `ParticipanteId` | `Guid`         | ID do participante que realizou a inscrição (chave estrangeira). |
+| `Participante`   | `Participante` | Navegação para o participante que se inscreveu.                  |
+| `DataInscricao`  | `DateTime`     | Data e hora em que a inscrição foi realizada.                    |
