@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entity;
 
-[Table("Participante")]
+[Table("Participantes")]
 public class Participante
 {
     [Key]

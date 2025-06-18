@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entity;
 
-[Table("Evento")]
+[Table("Eventos")]
 public class Evento
 {
     [Key]
@@ -20,7 +20,7 @@ public class Evento
 
     [Required]
     public string? Local { get; set; }
-    public TipoEnum? Tipo { get; set; } = TipoEnum.Palestra;
+    public TipoEnum? Tipo { get; set; } = Domain.Enum.TipoEnum.Palestra;
     public DateTime? DataCriacao { get; set; } = DateTime.Now;
     public DateTime? DataInicialIncricao { get; set; } = DateTime.Now;
 

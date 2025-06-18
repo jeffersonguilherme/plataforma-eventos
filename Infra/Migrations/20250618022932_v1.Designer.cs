@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Migrations
 {
     [DbContext(typeof(EventoDbContext))]
-    [Migration("20250617061732_v1")]
+    [Migration("20250618022932_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -59,7 +59,7 @@ namespace Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Evento");
+                    b.ToTable("Eventos");
                 });
 
             modelBuilder.Entity("Domain.Entity.Inscricao", b =>
@@ -83,7 +83,7 @@ namespace Infra.Migrations
 
                     b.HasIndex("ParticipanteId");
 
-                    b.ToTable("Inscricao");
+                    b.ToTable("Inscricoes");
                 });
 
             modelBuilder.Entity("Domain.Entity.Participante", b =>
@@ -130,7 +130,7 @@ namespace Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Participante");
+                    b.ToTable("Participantes");
                 });
 
             modelBuilder.Entity("Domain.Entity.Inscricao", b =>

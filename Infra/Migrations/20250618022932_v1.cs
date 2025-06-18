@@ -12,7 +12,7 @@ namespace Infra.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Evento",
+                name: "Eventos",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -26,11 +26,11 @@ namespace Infra.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Evento", x => x.Id);
+                    table.PrimaryKey("PK_Eventos", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Participante",
+                name: "Participantes",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -46,11 +46,11 @@ namespace Infra.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Participante", x => x.Id);
+                    table.PrimaryKey("PK_Participantes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Inscricao",
+                name: "Inscricoes",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -60,29 +60,29 @@ namespace Infra.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Inscricao", x => x.Id);
+                    table.PrimaryKey("PK_Inscricoes", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Inscricao_Evento_EventoId",
+                        name: "FK_Inscricoes_Eventos_EventoId",
                         column: x => x.EventoId,
-                        principalTable: "Evento",
+                        principalTable: "Eventos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Inscricao_Participante_ParticipanteId",
+                        name: "FK_Inscricoes_Participantes_ParticipanteId",
                         column: x => x.ParticipanteId,
-                        principalTable: "Participante",
+                        principalTable: "Participantes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Inscricao_EventoId",
-                table: "Inscricao",
+                name: "IX_Inscricoes_EventoId",
+                table: "Inscricoes",
                 column: "EventoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Inscricao_ParticipanteId",
-                table: "Inscricao",
+                name: "IX_Inscricoes_ParticipanteId",
+                table: "Inscricoes",
                 column: "ParticipanteId");
         }
 
@@ -90,13 +90,13 @@ namespace Infra.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Inscricao");
+                name: "Inscricoes");
 
             migrationBuilder.DropTable(
-                name: "Evento");
+                name: "Eventos");
 
             migrationBuilder.DropTable(
-                name: "Participante");
+                name: "Participantes");
         }
     }
 }
