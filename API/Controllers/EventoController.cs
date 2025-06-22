@@ -21,6 +21,20 @@ public class EventoController(IMediator mediator) : ControllerBase
     [HttpGet("all-eventos")]
     public async Task<ActionResult<List<EventoInfoViewModel>>> GetAllEventos()
     {
+        
         return Ok(await _mediator.Send(new GetAllEventosQuery()));
+    }
+
+    [HttpGet("eventos/{id:guid}")]
+    public async Task<ActionResult<EventoInfoViewModel>> GetEventosId()
+    {
+        return Ok(await _mediator.Send(new GetByIdEventoQuery()));
+    }
+
+    [HttpPut("atualizar-evento/{id:guid}")]
+    public async Task<ActionResult<EventoInfoViewModel>> UpdateEvento(Guid id,[FromBody] UpdateEventoCommand command)
+    {
+        command.Id = id;
+        return Ok(await _mediator.Send(command));
     }
 }

@@ -20,7 +20,8 @@ public class GetAllEventosQueryHandler : IRequestHandler<GetAllEventosQuery, Lis
         var eventos = await _context.Eventos
             .AsNoTracking()
             .Select(evento => new EventoInfoViewModel
-            {
+            {   
+                Id = evento.Id,
                 Titulo = evento.Titulo,
                 Descricao = evento.Descricao,
                 Local = evento.Local,
